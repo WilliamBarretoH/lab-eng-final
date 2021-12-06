@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 0, 81);
+}
+
+.container {
+    padding: 16px;
+}
+
+table {
+    width:35%;
+}
+table, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;  
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+
+table#t01 th {
+    background-color: #dcefff;
+    color: #000000;
+}
+
+button {
+    background-color: #e0e0e0;
+    color:black;
+    padding: 16px 25px;
+    margin: 16px 0;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+}

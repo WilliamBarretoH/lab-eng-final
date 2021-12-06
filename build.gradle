@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.gretty' version '2.2.0'    
+}
+
+dependencies {
+
+    implementation 'com.google.guava:guava:26.0-jre'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.2.0'
+    implementation 'org.hibernate:hibernate-core:5.3.7.Final'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'javax.servlet:jstl:1.2'
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+
+
+    testCompile "org.mockito:mockito-core:2.+"   
+    testCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'  
+}
+
+repositories { 
+    jcenter()
+}
+
+gretty {
+  servletContainer = 'tomcat8'
+}
+
+test{
+    useJUnitPlatform()
+}
